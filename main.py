@@ -40,7 +40,6 @@ def article(e):
     artsplit = d.split("/")[-1].replace(".txt" , "")
     result.append(artsplit)
   return render_template("article.html" , d = result)
-
-app.run(debug=True , port = '3000' , 
-host = '0.0.0.0')
+if __name__ == "__main__":
+  app.run(debug=True , port = '3000' , host = '0.0.0.0')
 
