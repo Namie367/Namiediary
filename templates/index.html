@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Travel The World</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+	</script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Travel The World</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="#">Korea</a></li>
+				<li><a href="#">Japan</a></li>
+				<li><a href="#">England</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="containter">
+		<div class="col-md-4">
+			<img class="img-responsive img-thumbnail" src = "/static/IMG_4461.JPG">
+      </div>
+      <div class = "col-md-4">
+        <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>INTRODUCTION</h2>          
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>欄目</th>
+              <th>內容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NAME</td>
+              <td>Mingyu</td>
+            </tr>
+            <tr>
+              <td>HEIGHT</td>
+              <td>186</td>
+            </tr>
+            <tr>
+              <td>BIRTH</td>
+              <td>1997/04/06</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-12">
+        <h2>文章</h2>          
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class = "danger">分類</th>
+              <th class = "success">篇數</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cat in d %}
+            <tr>
+              <td><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>{{cat[0]}}</td>
+              <td><a href = "/category/{{cat[0]}}">{{cat[1]}}</a></td>
+            </tr>
+            {% endfor %}
+            
+            
+          </tbody>
+        </table>
+    </div>
+    <div class = "container">
+      <div class = "col-md-12">
+        <a href = "https://youtu.be/Bzz8E5vYb2Y">9/16回歸teaser<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span></a>
+      </div>
+    </div>
+
+
+  </body>
+</html>
